@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
     @bookmark = @list.bookmarks.build(bookmarks_params)
     if @bookmark.save
-      redirect_to @list, notice: "Bookmark was successfully added!"
+      redirect_to @list, notice: "Bookmark successfully added!"
     else
       render :new
     end
